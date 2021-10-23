@@ -1,0 +1,37 @@
+\problemname{The Gourmet}
+The French gourmet Frank is a very well-respected gourmet; his job involves going around to various restaurants, eating their food and then writing a review about the restaurant.
+But he carries a dark secret: he is actually only interested in eating as much as possible and in any order!
+
+However, Frank understands that a true gourmet can't eat in just any manner, like starting with his dessert and finishing with a salad.
+Therefore, he asks for your help in constructing a list with all the different ways he could arrange his courses during a meal, so that he can pick the best order.
+
+During the serving, Frank has $M$ minutes to eat.
+The restaurant offers $N$ different courses, and he can eat any number of servings of each course.
+For course $i$, it takes $T_i$ minutes to eat a serving of it.
+Frank wants to eat something during each of the $M$ minutes he has, and he wants to finish every course that he is served.
+He never wants to start eating a new course until he finished the last one.
+
+Your task is to write a program to compute the number of ways he could arrange his meal, given these restrictions.
+
+\section*{Input}
+The first line contains an integer $M$ ($1 \le M \le 1\,000$), the number of minutes. 
+
+The second line contains an integer $N$ ($1 \le N \le 30$), the number of courses.
+
+Afterwards, $N$ lines follow with an integer $T_i$ ($1 \le T_i \le 200$) on each line, the time it takes to eat every dish.
+
+\section*{Output}
+The program should output the number of ways in which Frank can eat during exactly $M$ minutes.
+
+The answer will always be at most 2 billion ($2\,000\,000\,000$).
+
+\section*{Scoring}
+Your program will be tested on $5$ test cases.
+For each test cases you pass, you will get $20$ points.
+
+For test cases worth $60$ points, the answer will be less than $2$ million ($2\,000\,000$).
+
+\section*{Explanation of Sample $1$}
+Frank is going to eat during $10$ minutes and have two courses to choose from, for example a sallad (takes $3$ minutes to eat) and pie ($7$ minutes).
+There are only two ways he can eat them: first pie and then sallad or vice versa.
+If he only eats sallad he will wither finish too quickly ($3 \text{ servings} = 9 \text{ minutes}$) or too late ($4 \text{ servings} = 12 \text{ minutes}$).
