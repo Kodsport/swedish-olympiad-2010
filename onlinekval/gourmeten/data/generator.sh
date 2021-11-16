@@ -2,9 +2,11 @@
 
 PPATH=$(realpath ..)
 REQUIRE_SAMPLE_REUSE=0
-. ../../../../testdata_tools/gen.sh
+. ../../../../../testdata_tools/gen.sh
 
 ulimit -s unlimited
+
+compile gen_random.py
 
 use_solution karl.cpp
 
@@ -13,22 +15,27 @@ limits maxans=2000000000
 sample 1
 sample 2
 
-group group1 20
+group group1 60
 limits maxans=2000000
+tc 1
+tc 2
 tc_manual g1
-
-group group2 20
-limits maxans=2000000
 tc_manual g2
-
-group group3 20
-limits maxans=2000000
 tc_manual g3
+tc rnd-small-1 gen_random maxans=2000000
+tc rnd-small-2 gen_random maxans=2000000
+tc rnd-small-3 gen_random maxans=2000000
+tc rnd-small-4 gen_random maxans=2000000
+tc rnd-small-5 gen_random maxans=2000000
+tc rnd-small-6 gen_random maxans=2000000
 
-group group4 20
+group group2 40
 limits maxans=2000000000
 tc_manual g4
-
-group group5 20
-limits maxans=2000000000
 tc_manual g5
+tc rnd-1 gen_random maxans=2000000000
+tc rnd-2 gen_random maxans=2000000000
+tc rnd-3 gen_random maxans=2000000000
+tc rnd-4 gen_random maxans=2000000000
+tc rnd-5 gen_random maxans=2000000000
+tc rnd-6 gen_random maxans=2000000000
