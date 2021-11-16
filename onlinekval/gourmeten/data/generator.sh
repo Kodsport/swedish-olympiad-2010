@@ -31,6 +31,7 @@ tc rnd-small-6 gen_random maxans=2000000
 
 group group2 40
 limits maxans=2000000000
+include_group group1
 tc_manual g4
 tc_manual g5
 tc rnd-1 gen_random maxans=2000000000
