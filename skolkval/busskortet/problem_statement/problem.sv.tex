@@ -1,0 +1,25 @@
+\problemname{Busskortet}
+Du ska köpa ett busskort. Det är ett påtankningskort som du laddar med pengar, därefter kan du åka på kortet tills pengarna tagit slut. Du vet att du ska åka för $K$ kronor, där $K \leq 10000$. Att ladda kortet tar sin tid eftersom du endast kan ladda kortet med $500$, $200$ eller $100$ kr i taget. Du har för tillfället bråttom och vill därför utföra så litet antal transaktioner som möjligt, men aldrig tanka på mer pengar än nödvändigt.
+
+Om du ska åka för 800 kronor ska du alltså först ladda med 500, sen med 200, därefter med 100 kr. Om du däremot ska åka för 850 kronor ska du först ladda med 500 och därefter ladda med 200 två gånger. Visserligen går 50 kronor till spillo, men det är ändå det bästa alternativet.
+
+Skriv ett program som beräknar det minsta antalet transaktioner du behöver göra.
+
+\section*{Input}
+Indatan består av heltalet $K$ ($1 \leq K \leq 10000$), det vill säga antalet kronor du ska åka för.
+
+\section*{Output}
+Skriv ett heltal: det minsta antalet transaktioner du behöver göra.
+
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Grupp} & \textbf{Poäng} & \textbf{Gränser} \\ \hline
+  $1$    & $33$        & Du behöver inte spendera mer än $K$ kronor. \\ \hline 
+  $2$    & $67$        & Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
